@@ -1,0 +1,46 @@
+name: Portfolio quality and secret scanning
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '34 8 1 * *'
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out portfolio without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Load version-pinned shared quality checks
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: JamieChristian22/.github
+          ref: 95021fc9b37dafb92b674021c54440ab033145f5
+          path: .portfolio-audit-tools
+          persist-credentials: false
+      - name: Check licensing, README links, Python syntax, credential patterns, and assets
+        run: python .portfolio-audit-tools/tools/portfolio_audit.py
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out full Git history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Scan verified secrets (full history on manual or scheduled runs)
+        uses: trufflesecurity/trufflehog@f15cb8b37b9b70056bc82a8eb7151f75fad27a71 # v3.90.13
+        with:
+          version: '3.90.13'
+          extra_args: --only-verified
