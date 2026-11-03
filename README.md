@@ -298,3 +298,7 @@ Business Analysis | Systems Analysis | Data Analytics | Business Intelligence
 **Built and maintained by Jamie Christian II**
 
 </div>
+
+## License and third-party materials
+
+See [LICENSE](LICENSE) for the repository license. Third-party code, datasets, images, and other assets retain their respective terms.
