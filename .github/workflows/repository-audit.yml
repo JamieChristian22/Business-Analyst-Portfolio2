@@ -17,11 +17,11 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out portfolio without persisted credentials
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Load version-pinned shared quality checks
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: JamieChristian22/.github
           ref: 95021fc9b37dafb92b674021c54440ab033145f5
@@ -35,12 +35,12 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Check out full Git history
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Scan verified secrets (full history on manual or scheduled runs)
-        uses: trufflesecurity/trufflehog@f15cb8b37b9b70056bc82a8eb7151f75fad27a71 # v3.90.13
+        uses: trufflesecurity/trufflehog@31ce31ee1abbcc7dc8eee5764c17121c3044c8b2 # v3.99.7
         with:
           version: '3.90.13'
           extra_args: --only-verified
