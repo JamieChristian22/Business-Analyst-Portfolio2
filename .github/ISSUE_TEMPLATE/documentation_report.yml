@@ -1,0 +1,29 @@
+name: "Documentation or example correction"
+description: "Report a broken link, unclear requirement or workflow, accessibility barrier, or inaccurate example."
+title: "[Docs] "
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for helping make these educational business-analysis examples clearer. Do not share private customer data, client documents, or sensitive information."
+  - type: input
+    id: location
+    attributes:
+      label: "File or section"
+      description: "Link to the public repository file, directory, or heading."
+      placeholder: "README.md / Healthcare_BA_Case_Study"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What is confusing or incorrect?"
+      description: "Describe the observed problem without including private information."
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: "Suggested correction"
+      description: "What would make this example easier to understand or verify?"
+    validations:
+      required: false
