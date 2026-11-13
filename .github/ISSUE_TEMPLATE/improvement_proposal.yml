@@ -1,0 +1,33 @@
+name: "Learning resource improvement idea"
+description: "Suggest a clearer example, accessible walkthrough, or reproducibility improvement."
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please propose focused educational improvements. For substantial changes, discuss the scope before submitting a pull request. Do not submit proprietary files or data whose use rights are unclear."
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Area"
+      options:
+        - "Requirements and traceability"
+        - "Process mapping and diagrams"
+        - "Business analytics and reporting"
+        - "Accessibility and documentation"
+        - "Testing and reproducibility"
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: "What would you improve?"
+      description: "Explain the problem, the intended user, and the suggested improvement."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Supporting links or examples"
+      description: "Use public links and original or appropriately licensed materials only."
+    validations:
+      required: false
