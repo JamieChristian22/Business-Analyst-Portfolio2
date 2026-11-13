@@ -47,7 +47,7 @@ Looking for a practical business analysis exercise? Explore these existing *exam
 | **Plan delivery risks** | [Requirements planning artifacts](./Requirements%20Planning%20Artifacts/) | Identify a risk, owner, mitigation, and status for a fictional project |
 | **Visualize a process** | [Business analyst models and diagrams](./Business%20Analyst%20Models%20and%20Diagrams/) | Explain an as-is workflow and a possible to-be improvement |
 
-**For the community:** [Contributing guide](CONTRIBUTING.md) · [Report a documentation or example problem](https://github.com/JamieChristian22/Business-Analyst-Portfolio2/issues/new/choose) · [Reviewer guide and asset provenance](REVIEWER_GUIDE.md).
+**For the community:** [Three free community practice tasks](COMMUNITY_TASKS.md) · [Contributing guide](CONTRIBUTING.md) · [Report a documentation or example problem](https://github.com/JamieChristian22/Business-Analyst-Portfolio2/issues/new/choose) · [Reviewer guide and asset provenance](REVIEWER_GUIDE.md).
 
 These are portfolio examples, not verified redistributable template packs. The provenance of some tracked assets remains to be checked. Don't reuse or redistribute third-party materials without verifying their rights. All scenario outcomes should remain labeled as illustrative or simulated where appropriate.
 
